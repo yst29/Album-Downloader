@@ -1,0 +1,43 @@
+.progress {
+	height: 1.5em;
+	width: 100%;
+	background-color: #c9c9c9;
+	position: relative;
+  }
+  .progress:before {
+	content: attr(data-label);
+	font-size: 0.8em;
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	left: 0;
+	right: 0;
+  }
+  .progress .value {
+	background-color: #7cc4ff;
+	display: inline-block;
+	height: 100%;
+  }
+  textarea {
+	width: 1000px;
+	height: 200px;
+  }
+  button {
+	width: 1000px;
+	height: 25px;
+  }
+  table {
+	width: 1000px;
+  }
+  table tr td:nth-child(1) {
+	  width: 60%;
+  }
+  table tr td:nth-child(2) {
+	  width: 10%;
+  }
+  #table-title {
+	background-color: #eff0f1;
+  }
+  td {
+	  border: 1px groove;
+  }

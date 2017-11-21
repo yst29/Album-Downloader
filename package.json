@@ -1,0 +1,14 @@
+{
+  "name": "Album-Downloader",
+  "main": "index.html",
+  "window": {
+    "width": 1024,
+    "height": 768,
+    "toolbar": true
+  },
+  "dependencies": {
+    "iconv-lite": "^0.4.19",
+    "queue": "^4.4.0",
+    "request": "^2.83.0"
+  }
+}

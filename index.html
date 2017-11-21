@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Album Downloader</title>
+    <link rel="stylesheet" href="library/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="library/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script src="library/jquery-latest.min.js"></script>
+    <script src="library/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="script.js"></script>
+    <style>
+        .only-padding-right {
+            padding: 0 5px 0 0;
+        }
+        @media (min-width: 768px) {
+            .row-fluid {
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        .progress {
+            position: relative;
+            margin: 0 5px 0 5px;
+        }
+        .progress span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            color: black;
+        }
+        .progress-bar-custom {
+            background-color: #66ff66;
+            background-image: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Album Downloader</h1>
+        <div class="row-fluid" style="margin-bottom: 5px;">
+            <div class="col-sm-8 only-padding-right">
+                <div class="input-group">
+                    <label class="input-group-addon">Download to</label>
+                    <input id="targetDir" type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" onclick="changeRootDir();">Change</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-4 only-padding-right">
+                <span id="changeDirMsg" style="display:none"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comment">Paste URLs to below:</label>
+            <textarea class="form-control" rows="5" id="inputUrls"></textarea>
+        </div> 
+        <button type="button" class="btn btn-warning btn-block" style="margin-bottom:15px;" onclick="do_add();">
+            <span class="glyphicon glyphicon-download-alt"></span> Add to download queue
+        </button>
+        <table class="table table-bordered table-condensed table-hover">
+        <thead>
+            <tr class="active">
+            <th class="col-md-6">Name</th>
+            <th class="col-md-3">Progress</th>
+            <th class="col-md-3">Resource</th>
+            </tr>
+        </thead>
+        <tbody id="result_table">
+            
+        </tbody>
+        </table>
+		
+    </div>
+    <!-- /container -->
+
+</body>
+
+</html>
